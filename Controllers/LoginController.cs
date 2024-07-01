@@ -5,29 +5,29 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HHD.Controllers
 {
-    public class RegisterController : Controller
+    public class LoginController : Controller
     {
         public readonly IAuthBL authBl;
 
-        public RegisterController(IAuthBL authBl)
+        public LoginController(IAuthBL authBl)
         {
             this.authBl = authBl;
         }
 
         [HttpGet]
-        [Route("/register")]
+        [Route("/login")]
         public IActionResult Index()
         {
-            return View("Index", new RegisterViewModel());
+            return View("Index", new LoginViewModel());
         }
 
         [HttpPost]
-        [Route("/register")]
-        public async Task<IActionResult> IndexSave(RegisterViewModel model)
+        [Route("/login")]
+        public async Task<IActionResult> IndexSave(LoginViewModel model)
         {
-            if (ModelState.IsValid) 
+            if (ModelState.IsValid)
             {
-                await authBl.CreateUser(AuthMapper.MapRegisterViewModelToUserModel(model));
+                await authBl.Authenticate(model.Email!, model.Password!, model.RememberMe == true);
                 return Redirect("/");
             }
 

@@ -3,68 +3,16 @@
   "WorkspaceRootPath": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\currentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\authbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\authbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\authconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\authconstants.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:dal\\authdal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:viewmodels\\registerviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:controllers\\registercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:controllers\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\icurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\icurrentuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\iencrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\iencrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\encrypt.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:readme.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:views\\register\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\voewmapper\\authmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:voewmapper\\authmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\bl\\auth\\authbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:bl\\auth\\authbl.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -74,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -85,215 +33,42 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthDAL.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\DAL\\AuthDAL.cs",
-              "RelativeDocumentMoniker": "DAL\\AuthDAL.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\DAL\\AuthDAL.cs",
-              "RelativeToolTip": "DAL\\AuthDAL.cs",
-              "ViewState": "AQIAABUAAAAAAAAAAAAAACsAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:49:02.149Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAbAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T20:38:33.594Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "HomeController.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\HomeController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\HomeController.cs",
-              "RelativeToolTip": "Controllers\\HomeController.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:31:00.639Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "AuthConstants.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthConstants.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\AuthConstants.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthConstants.cs",
-              "RelativeToolTip": "BL\\Auth\\AuthConstants.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA/AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:26:24.285Z",
-              "EditorCaption": ""
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CurrentUser.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\CurrentUser.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\CurrentUser.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\CurrentUser.cs",
-              "RelativeToolTip": "BL\\Auth\\CurrentUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAeAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:23:35.701Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "ICurrentUser.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\ICurrentUser.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\ICurrentUser.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\ICurrentUser.cs",
-              "RelativeToolTip": "BL\\Auth\\ICurrentUser.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAaAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:22:34.6Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "README.md",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\README.md",
-              "RelativeDocumentMoniker": "README.md",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\README.md",
-              "RelativeToolTip": "README.md",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
-              "WhenOpened": "2024-06-30T20:14:13.396Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Encrypt.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\Encrypt.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\Encrypt.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\Encrypt.cs",
-              "RelativeToolTip": "BL\\Auth\\Encrypt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAATAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:08:31.458Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "IEncrypt.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\IEncrypt.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\IEncrypt.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\IEncrypt.cs",
-              "RelativeToolTip": "BL\\Auth\\IEncrypt.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAA6AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:07:06.511Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AuthBL.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthBL.cs",
-              "RelativeDocumentMoniker": "BL\\Auth\\AuthBL.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthBL.cs",
-              "RelativeToolTip": "BL\\Auth\\AuthBL.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABwAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T20:05:24.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T19:29:37.825Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "_ViewImports.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\_ViewImports.cshtml",
-              "RelativeDocumentMoniker": "Views\\_ViewImports.cshtml",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\_ViewImports.cshtml",
-              "RelativeToolTip": "Views\\_ViewImports.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAVAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T19:24:42.984Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RegisterViewModel.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\ViewModels\\RegisterViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\RegisterViewModel.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\ViewModels\\RegisterViewModel.cs",
-              "RelativeToolTip": "ViewModels\\RegisterViewModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAKAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T19:24:40.114Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Register\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Register\\Index.cshtml",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Register\\Index.cshtml",
-              "RelativeToolTip": "Views\\Register\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAhAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-30T19:24:22.113Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "AuthMapper.cs",
-              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\VoewMapper\\AuthMapper.cs",
-              "RelativeDocumentMoniker": "VoewMapper\\AuthMapper.cs",
-              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\VoewMapper\\AuthMapper.cs",
-              "RelativeToolTip": "VoewMapper\\AuthMapper.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T19:17:35.764Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegisterController.cs",
               "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\RegisterController.cs",
               "RelativeToolTip": "Controllers\\RegisterController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAB4AAAAlAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAlAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-30T19:09:21.027Z",
+              "WhenOpened": "2024-07-01T19:06:40.588Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LoginController.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\LoginController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LoginController.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\LoginController.cs",
+              "RelativeToolTip": "Controllers\\LoginController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABgAAAAWAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T19:01:48.807Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "AuthBL.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthBL.cs",
+              "RelativeDocumentMoniker": "BL\\Auth\\AuthBL.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\BL\\Auth\\AuthBL.cs",
+              "RelativeToolTip": "BL\\Auth\\AuthBL.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-01T18:51:47.381Z",
               "EditorCaption": ""
             }
           ]
