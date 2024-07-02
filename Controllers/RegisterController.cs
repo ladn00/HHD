@@ -25,7 +25,16 @@ namespace HHD.Controllers
         [Route("/register")]
         public async Task<IActionResult> IndexSave(RegisterViewModel model)
         {
-            if (ModelState.IsValid) 
+            if (ModelState.IsValid)
+            {
+                var errorModel = await authBl.ValidateEmail(model.Email ?? "");
+                if (errorModel != null)
+                {
+                    ModelState.TryAddModelError("Email", errorModel.ErrorMessage!);
+                }
+            }
+
+            if (ModelState.IsValid)
             {
                 await authBl.CreateUser(AuthMapper.MapRegisterViewModelToUserModel(model));
                 return Redirect("/");

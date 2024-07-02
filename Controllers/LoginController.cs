@@ -1,7 +1,9 @@
-﻿using HHD.BL.Auth;
+﻿using HHD.BL;
+using HHD.BL.Auth;
 using HHD.ViewModels;
 using HHD.VoewMapper;
 using Microsoft.AspNetCore.Mvc;
+using System.Linq.Expressions;
 
 namespace HHD.Controllers
 {
@@ -27,8 +29,15 @@ namespace HHD.Controllers
         {
             if (ModelState.IsValid)
             {
-                await authBl.Authenticate(model.Email!, model.Password!, model.RememberMe == true);
-                return Redirect("/");
+                try
+                {
+                    await authBl.Authenticate(model.Email!, model.Password!, model.RememberMe == true);
+                    return Redirect("/");
+                }
+                catch(AuthorizationException)
+                {
+                    ModelState.AddModelError("Email", "Имя или Email неверные");
+                }
             }
 
             return View("Index", model);

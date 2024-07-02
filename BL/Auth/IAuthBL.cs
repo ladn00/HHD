@@ -1,4 +1,5 @@
 ﻿using HHD.DAL.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace HHD.BL.Auth
 {
@@ -6,5 +7,6 @@ namespace HHD.BL.Auth
     {
         Task<int> CreateUser(UserModel user);
         Task<int> Authenticate(string email, string password, bool rememberMe);
+        Task<ValidationResult?> ValidateEmail(string email);
     }
 }

@@ -1,5 +1,8 @@
 ﻿using HHD.DAL.Models;
 using HHD.DAL;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations;
+using HHD.BL;
 
 namespace HHD.BL.Auth
 {
@@ -20,12 +23,13 @@ namespace HHD.BL.Auth
         {
             var user = await authDal.GetUser(email);
 
-            if (user.Password == encrypt.HashPassword(password, user.Salt))
+            if (user.UserId != null && user.Password == encrypt.HashPassword(password, user.Salt))
             {
                 Login(user.UserId ?? 0);
                 return user.UserId ?? 0;
             }
-            return user.UserId ?? 0;
+
+            throw new AuthorizationException();
         }
 
         public async Task<int> CreateUser(UserModel user)
@@ -40,6 +44,15 @@ namespace HHD.BL.Auth
         public void Login(int id)
         {
             httpContextAccessor.HttpContext?.Session.SetInt32("userid", id);
+        }
+
+        public async Task<ValidationResult?> ValidateEmail(string email)
+        {
+            var user = await authDal.GetUser(email);
+
+            if (user.UserId != null)
+                return new ValidationResult("Email уже существует");
+            return null;
         }
     }
 }
