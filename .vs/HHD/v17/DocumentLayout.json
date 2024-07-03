@@ -3,6 +3,26 @@
   "WorkspaceRootPath": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:viewmodels\\profileviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:views\\profile\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd\\hhd.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}|HHD.csproj|solutionrelative:hhd.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}|..\\HHD_test\\HHD_test.csproj|d:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\hhd_test\\registertest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -19,7 +39,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -31,7 +51,72 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HHD",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\HHD.csproj",
+              "RelativeDocumentMoniker": "HHD.csproj",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\HHD.csproj",
+              "RelativeToolTip": "HHD.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAABZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-07-03T19:54:36.881Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Login\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Login\\Index.cshtml",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Login\\Index.cshtml",
+              "RelativeToolTip": "Views\\Login\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T19:50:42.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileViewModel.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\ViewModels\\ProfileViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\ProfileViewModel.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\ViewModels\\ProfileViewModel.cs",
+              "RelativeToolTip": "ViewModels\\ProfileViewModel.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T19:49:13.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Profile\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\Profile\\Index.cshtml",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Views\\Profile\\Index.cshtml",
+              "RelativeToolTip": "Views\\Profile\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAMAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-07-03T19:48:45.413Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ProfileController.cs",
+              "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD\\Controllers\\ProfileController.cs*",
+              "RelativeToolTip": "Controllers\\ProfileController.cs*",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACUAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-03T19:47:06.67Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "BaseTest.cs",
               "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD_test\\Helpers\\BaseTest.cs",
               "RelativeDocumentMoniker": "..\\HHD_test\\Helpers\\BaseTest.cs",
@@ -39,12 +124,11 @@
               "RelativeToolTip": "..\\HHD_test\\Helpers\\BaseTest.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAJAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:50:54.6Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T16:50:54.6Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "Helper.cs",
               "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD_test\\Helpers\\Helper.cs",
               "RelativeDocumentMoniker": "..\\HHD_test\\Helpers\\Helper.cs",
@@ -52,18 +136,17 @@
               "RelativeToolTip": "..\\HHD_test\\Helpers\\Helper.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAPAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-07-02T16:50:37.028Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-07-02T16:50:37.028Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 5,
               "Title": "RegisterTest.cs",
               "DocumentMoniker": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD_test\\RegisterTest.cs",
               "RelativeDocumentMoniker": "..\\HHD_test\\RegisterTest.cs",
               "ToolTip": "D:\\\u043F\u0440\u043E\u0435\u043A\u0442\u044B \u0432\u0441\\HHD_test\\RegisterTest.cs",
               "RelativeToolTip": "..\\HHD_test\\RegisterTest.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAdAAAA",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAAwCAAAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-07-02T16:48:34.674Z",
               "EditorCaption": ""
