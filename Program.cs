@@ -1,16 +1,19 @@
+using HHD.BL.Auth;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSingleton<HHD.BL.Auth.IAuthBL, HHD.BL.Auth.AuthBL>();
+builder.Services.AddScoped<IAuthBL, AuthBL>();
 builder.Services.AddSingleton<HHD.DAL.IAuthDAL, HHD.DAL.AuthDAL>();
-builder.Services.AddSingleton<HHD.BL.Auth.IEncrypt, HHD.BL.Auth.Encrypt>();
-builder.Services.AddScoped<HHD.BL.Auth.ICurrentUser, HHD.BL.Auth.CurrentUser>();
+builder.Services.AddSingleton<HHD.DAL.IDbSessionDAL, HHD.DAL.DbSessionDAL>();
+builder.Services.AddSingleton<IEncrypt, Encrypt>();
+builder.Services.AddScoped<ICurrentUser, CurrentUser>();
+builder.Services.AddScoped<IDbSession, DbSession>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
-builder.Services.AddMvc().AddSessionStateTempDataProvider();
-builder.Services.AddSession();
+builder.Services.AddMvc();
 
 var app = builder.Build();
 
@@ -24,7 +27,6 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
-app.UseSession();
 app.UseRouting();
 
 app.UseAuthorization();

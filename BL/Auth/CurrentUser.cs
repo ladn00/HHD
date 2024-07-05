@@ -3,16 +3,17 @@
     public class CurrentUser : ICurrentUser
     {
         readonly IHttpContextAccessor httpContextAccessor;
+        private readonly IDbSession dbSession;
 
-        public CurrentUser(IHttpContextAccessor httpContextAccessor)
+        public CurrentUser(IHttpContextAccessor httpContextAccessor, IDbSession dbSession)
         {
                 this.httpContextAccessor = httpContextAccessor;
+                this.dbSession = dbSession;
         }
 
-        public bool IsLoggedIn()
+        public async Task<bool> IsLoggedIn()
         {
-            int? id = httpContextAccessor.HttpContext?.Session.GetInt32(AuthConstants.AUTH_SESSION_PARAM_NAME);
-            return id != null;
+            return await dbSession.IsLoggedIn();
         }
     }
 }

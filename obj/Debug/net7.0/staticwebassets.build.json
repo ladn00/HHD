@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8FkijDr01HeTTCAxMrDpqcHWncmNFCyg8AKflGm95CE=",
+  "Hash": "TVBXfN4e+eAIsDuKM7sTEmKmlblKvqUsWfY0q7KpE6Q=",
   "Source": "HHD",
   "BasePath": "_content/HHD",
   "Mode": "Default",
@@ -91,6 +91,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "D:\\проекты вс\\HHD\\wwwroot\\images\\0B\\0B90\\6609335-84.png",
+      "SourceId": "HHD",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\проекты вс\\HHD\\wwwroot\\",
+      "BasePath": "_content/HHD",
+      "RelativePath": "images/0B/0B90/6609335-84.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\0B\\0B90\\6609335-84.png"
     },
     {
       "Identity": "D:\\проекты вс\\HHD\\wwwroot\\js\\site.js",
