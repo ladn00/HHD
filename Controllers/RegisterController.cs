@@ -7,9 +7,9 @@ namespace HHD.Controllers
 {
     public class RegisterController : Controller
     {
-        public readonly IAuthBL authBl;
+        public readonly IAuth authBl;
 
-        public RegisterController(IAuthBL authBl)
+        public RegisterController(IAuth authBl)
         {
             this.authBl = authBl;
         }
@@ -27,17 +27,16 @@ namespace HHD.Controllers
         {
             if (ModelState.IsValid)
             {
-                var errorModel = await authBl.ValidateEmail(model.Email ?? "");
-                if (errorModel != null)
+                try
                 {
-                    ModelState.TryAddModelError("Email", errorModel.ErrorMessage!);
+                    await authBl.Register(AuthMapper.MapRegisterViewModelToUserModel(model));
+                    return Redirect("/");
                 }
-            }
-
-            if (ModelState.IsValid)
-            {
-                await authBl.CreateUser(AuthMapper.MapRegisterViewModelToUserModel(model));
-                return Redirect("/");
+                catch (HHD.BL.DuplicateEmailException) 
+                {
+                    ModelState.TryAddModelError("Email", "Email уже существует");
+                }
+                
             }
 
             return View("Index", model);

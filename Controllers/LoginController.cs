@@ -9,9 +9,9 @@ namespace HHD.Controllers
 {
     public class LoginController : Controller
     {
-        public readonly IAuthBL authBl;
+        public readonly IAuth authBl;
 
-        public LoginController(IAuthBL authBl)
+        public LoginController(IAuth authBl)
         {
             this.authBl = authBl;
         }

@@ -3,17 +3,18 @@ using HHD.DAL;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using HHD.BL;
+using System.Reflection.Metadata;
 
 namespace HHD.BL.Auth
 {
-    public class AuthBL : IAuthBL
+    public class Auth : IAuth
     {
         private readonly IAuthDAL authDal;
         private readonly IEncrypt encrypt;
         private readonly IHttpContextAccessor httpContextAccessor;
         private readonly IDbSession dbSession;
 
-        public AuthBL(IAuthDAL authDal, IEncrypt encrypt, IHttpContextAccessor httpContextAccessor, IDbSession dbSession) 
+        public Auth(IAuthDAL authDal, IEncrypt encrypt, IHttpContextAccessor httpContextAccessor, IDbSession dbSession) 
         { 
             this.authDal = authDal;
             this.encrypt = encrypt;
@@ -43,18 +44,28 @@ namespace HHD.BL.Auth
             return id;
         }
 
+        public async Task Register(UserModel user)
+        {
+            using (var scope = General.Helpers.CreateTransactionScope())
+            {
+                await dbSession.Lock();
+                await ValidateEmail(user.Email);
+                await CreateUser(user);
+                scope.Complete();
+            } 
+        }
+
         public async Task Login(int id)
         {
             await dbSession.SetUserId(id);
         }
 
-        public async Task<ValidationResult?> ValidateEmail(string email)
+        public async Task ValidateEmail(string email)
         {
             var user = await authDal.GetUser(email);
 
             if (user.UserId != null)
-                return new ValidationResult("Email уже существует");
-            return null;
+                throw new DuplicateEmailException();
         }
     }
 }
