@@ -14,7 +14,9 @@
         <p>
             <label>Пароль</label>
             <input name="Password" type="password" />
-            <div class="error">@Html.ValidationMessageFor(m => m.Password)</div>
+        </p>
+        <p>
+            <input name="RememberMe" value="true" type="checkbox" /> Не выходить
         </p>
         <button>Вход</button>
     </form>

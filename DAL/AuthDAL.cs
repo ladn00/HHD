@@ -8,39 +8,33 @@ namespace HHD.DAL
     {
         public async Task<UserModel> GetUser(string email)
         {
-            using (var connection = new NpgsqlConnection(DbHelper.ConnString))
-            {
-                await connection.OpenAsync();
-
-                return await connection.QueryFirstOrDefaultAsync<UserModel>(@"
+            var result = await DbHelper.QueryAsync<UserModel>(@"
                         select UserId, Email, Password, Salt, Status 
                         from AppUser 
-                        Where Email = @email", new { email }) ?? new UserModel();
-            }
+                        Where Email = @email", new { email = email });
+
+            return result.FirstOrDefault() ?? new UserModel();
         }
+
 
         public async Task<UserModel> GetUser(int id)
         {
-            using (var connection = new NpgsqlConnection(DbHelper.ConnString))
-            {
-                await connection.OpenAsync();
-                return await connection.QueryFirstOrDefaultAsync<UserModel>(@"
+            var result = await DbHelper.QueryAsync<UserModel>(@"
                         select UserId, Email, Password, Salt, Status 
                         from AppUser 
-                        Where UserId = @id", new { id }) ?? new UserModel();
-            }
+                        Where UserId = @id", new { id = id });
+
+            return result.FirstOrDefault() ?? new UserModel();
         }
 
         public async Task<int> CreateUser(UserModel model)
         {
-            using (var connection = new NpgsqlConnection(DbHelper.ConnString))
-            {
-                await connection.OpenAsync();
-                string sql = @"insert into AppUser(Email, Password, Salt, Status)
+            string sql = @"insert into AppUser(Email, Password, Salt, Status)
                                 values(@Email, @Password, @Salt, @Status) returning UserId";
 
-                return await connection.QuerySingleAsync<int>(sql, model);
-            }
+            var result = await DbHelper.QueryAsync<int>(sql, model);
+            return result.First();
         }
     }
 }
+

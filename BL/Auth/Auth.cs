@@ -3,6 +3,7 @@ using HHD.DAL;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using HHD.BL;
+using HHD.BL.General;
 using System.Reflection.Metadata;
 
 namespace HHD.BL.Auth
@@ -11,14 +12,16 @@ namespace HHD.BL.Auth
     {
         private readonly IAuthDAL authDal;
         private readonly IEncrypt encrypt;
-        private readonly IHttpContextAccessor httpContextAccessor;
+        private readonly IWebCookie webCookie;
+        private readonly IUserTokenDAL userTokenDAL;
         private readonly IDbSession dbSession;
 
-        public Auth(IAuthDAL authDal, IEncrypt encrypt, IHttpContextAccessor httpContextAccessor, IDbSession dbSession) 
+        public Auth(IAuthDAL authDal, IEncrypt encrypt, IWebCookie webCookie, IUserTokenDAL userTokenDAL, IDbSession dbSession) 
         { 
             this.authDal = authDal;
             this.encrypt = encrypt;
-            this.httpContextAccessor = httpContextAccessor;
+            this.webCookie = webCookie;
+            this.userTokenDAL = userTokenDAL;
             this.dbSession = dbSession;
         }
 
@@ -29,6 +32,13 @@ namespace HHD.BL.Auth
             if (user.UserId != null && user.Password == encrypt.HashPassword(password, user.Salt))
             {
                 await Login(user.UserId ?? 0);
+
+                if(rememberMe)
+                {
+                    var tockenid = await userTokenDAL.Create(user.UserId ?? 0);
+                    webCookie.AddSecure(AuthConstants.RememberMeCookieName, tockenid.ToString(), 30);
+                }
+
                 return user.UserId ?? 0;
             }
 

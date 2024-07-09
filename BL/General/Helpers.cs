@@ -11,5 +11,12 @@ namespace HHD.BL.General
                 new TimeSpan(0, 0, seconds),
                 TransactionScopeAsyncFlowOption.Enabled);
         }
+
+        public static Guid? StringToGuidGef(string str)
+        {
+            Guid val;
+            if(Guid.TryParse(str, out val)) { return val; }
+            return null;
+        }
     }
 }

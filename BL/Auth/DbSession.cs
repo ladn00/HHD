@@ -1,27 +1,24 @@
 ﻿using HHD.DAL.Models;
 using HHD.DAL;
+using HHD.BL.General;
 
 namespace HHD.BL.Auth
 {
     public class DbSession : IDbSession
     {
         private readonly IDbSessionDAL sessionDAL;
-        private readonly IHttpContextAccessor httpContextAccessor;
+        private readonly IWebCookie webCookie;
 
-        public DbSession(IDbSessionDAL sessionDAL, IHttpContextAccessor httpContextAccessor)
+        public DbSession(IDbSessionDAL sessionDAL, IWebCookie webCookie)
         {
             this.sessionDAL = sessionDAL;
-            this.httpContextAccessor = httpContextAccessor;
+            this.webCookie = webCookie;
         }
 
         private void CreateSessionCookie(Guid sessionid)
         {
-            CookieOptions options = new CookieOptions();
-            options.Path = "/";
-            options.HttpOnly = true;
-            options.Secure = true;
-            httpContextAccessor?.HttpContext?.Response.Cookies.Delete(AuthConstants.SessionCookieName);
-            httpContextAccessor?.HttpContext?.Response.Cookies.Append(AuthConstants.SessionCookieName, sessionid.ToString(), options);
+            this.webCookie.Delete(AuthConstants.SessionCookieName);
+            this.webCookie.AddSecure(AuthConstants.SessionCookieName, sessionid.ToString());
         }
 
         private async Task<SessionModel> CreateSession()
@@ -43,10 +40,10 @@ namespace HHD.BL.Auth
                 return sessionModel;
 
             Guid sessionId;
-            var cookie = httpContextAccessor?.HttpContext?.Request?.Cookies.FirstOrDefault(m => m.Key == AuthConstants.SessionCookieName);
+            var sessionString = webCookie.Get(AuthConstants.SessionCookieName);
 
-            if (cookie != null && cookie.Value.Value != null)
-                sessionId = Guid.Parse(cookie.Value.Value);
+            if (sessionString != null)
+                sessionId = Guid.Parse(sessionString);
             else
                 sessionId = Guid.NewGuid();
 
