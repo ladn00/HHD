@@ -1,10 +1,12 @@
 ﻿using HHD.BL.Auth;
+using HHD.Middleware;
 using HHD.ViewModels;
 using HHD.VoewMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HHD.Controllers
 {
+    [SiteNotAuthorize()]
     public class RegisterController : Controller
     {
         public readonly IAuth authBl;
@@ -23,6 +25,7 @@ namespace HHD.Controllers
 
         [HttpPost]
         [Route("/register")]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IndexSave(RegisterViewModel model)
         {
             if (ModelState.IsValid)

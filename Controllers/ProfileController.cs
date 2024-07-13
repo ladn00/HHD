@@ -1,9 +1,12 @@
 ﻿using HHD.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
+using static System.Net.WebRequestMethods;
+using HHD.Middleware;
 
 namespace HHD.Controllers
 {
+    [SiteAuthorize()]
     public class ProfileController : Controller
     {
         [HttpGet]
@@ -15,6 +18,7 @@ namespace HHD.Controllers
 
         [HttpPost]
         [Route("/profile")]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IndexSave()
         {
             string filename = "";

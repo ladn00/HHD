@@ -11,12 +11,12 @@ namespace HHD.BL.General
             this.httpContextAccessor = httpContextAccessor;
         }
 
-        public void Add(string cookieName, string value, int days)
+        public void Add(string cookieName, string value, int days = 0)
         {
             CookieOptions options = new CookieOptions();
             options.Path = "/";
             if (days > 0)
-                options.Expires = DateTimeOffset.UtcNow.AddDays(30);
+                options.Expires = DateTimeOffset.UtcNow.AddDays(days);
             httpContextAccessor?.HttpContext?.Response.Cookies.Append(cookieName, value, options);
         }
 
@@ -27,7 +27,7 @@ namespace HHD.BL.General
             options.HttpOnly = true;
             options.Secure = true;
             if (days > 0)
-                options.Expires = DateTimeOffset.UtcNow.AddDays(30);
+                options.Expires = DateTimeOffset.UtcNow.AddDays(days);
             httpContextAccessor?.HttpContext?.Response.Cookies.Append(cookieName, value, options);
         }
 

@@ -4,9 +4,11 @@ using HHD.ViewModels;
 using HHD.VoewMapper;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq.Expressions;
+using HHD.Middleware;
 
 namespace HHD.Controllers
 {
+    [SiteNotAuthorize()]
     public class LoginController : Controller
     {
         public readonly IAuth authBl;
@@ -25,6 +27,7 @@ namespace HHD.Controllers
 
         [HttpPost]
         [Route("/login")]
+        [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IndexSave(LoginViewModel model)
         {
             if (ModelState.IsValid)
