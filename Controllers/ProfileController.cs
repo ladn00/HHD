@@ -3,6 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using System.Security.Cryptography;
 using static System.Net.WebRequestMethods;
 using HHD.Middleware;
+using System.Text;
+using HHD.Service;
+using SixLabors.ImageSharp;
+using SixLabors.ImageSharp.Processing;
 
 namespace HHD.Controllers
 {
@@ -21,26 +25,14 @@ namespace HHD.Controllers
         [AutoValidateAntiforgeryToken]
         public async Task<IActionResult> IndexSave()
         {
-            string filename = "";
             var imageData = Request.Form.Files[0];
 
-            MD5 mD5 = MD5.Create();
-            byte[] inputBytes = System.Text.Encoding.ASCII.GetBytes(imageData.FileName);
-            byte[] hashBytes = mD5.ComputeHash(inputBytes);
-            string hash = Convert.ToHexString(hashBytes);
-
-            var dir = "./wwwroot/images/" + hash.Substring(0, 2) + "/" + hash.Substring(0, 4);
-
-            if(!Directory.Exists(dir))
-                Directory.CreateDirectory(dir);
-
-            filename =  dir + "/" + imageData.FileName;
-
-            using (var stream = System.IO.File.Create(filename))
+            if (imageData != null)
             {
-                await imageData.CopyToAsync(stream);
+                WebFile webFile = new WebFile();
+                string filename = webFile.GetWebFileName(imageData.FileName);
+                await webFile.UploadAndResizeImage(imageData.OpenReadStream(), filename, 800, 600);
             }
-
             return View("Index", new ProfileViewModel());
         }
     }

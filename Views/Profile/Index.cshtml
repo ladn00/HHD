@@ -13,8 +13,18 @@
             <div class="error">@Html.ValidationMessageFor(m => m.ProfileName)</div>
         </p>
         <p>
+            <label>Имя</label>
+            <input name="FirstName" type="text" value="@Model.FirstName" />
+            <div class="error">@Html.ValidationMessageFor(m => m.FirstName)</div>
+        </p>
+        <p>
+            <label>Фамилия</label>
+            <input name="LastName" type="text" value="@Model.LastName" />
+            <div class="error">@Html.ValidationMessageFor(m => m.LastName)</div>
+        </p>
+        <p>
             <input type="file" name="file" />
         </p>
-        <button>Вход</button>
+        <button>Сохранить</button>
     </form>
 </div>
