@@ -1,38 +1,68 @@
 ﻿using HHD.ViewModels;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Cryptography;
-using static System.Net.WebRequestMethods;
 using HHD.Middleware;
-using System.Text;
 using HHD.Service;
-using SixLabors.ImageSharp;
-using SixLabors.ImageSharp.Processing;
+using HHD.BL.Auth;
+using HHD.BL.Profile;
+using HHD.ViewMapper;
+using HHD.DAL.Models;
 
 namespace HHD.Controllers
 {
     [SiteAuthorize()]
     public class ProfileController : Controller
     {
+        private readonly ICurrentUser currentUser;
+        private readonly IProfile profile;
+
+        public ProfileController(ICurrentUser currentUser, IProfile profile)
+        {
+            this.currentUser = currentUser;
+            this.profile = profile;
+        }
+
         [HttpGet]
         [Route("/profile")]
-        public IActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View(new ProfileViewModel());
+            var profiles = await currentUser.GetProfiles();
+            var profileModel = profiles.FirstOrDefault();
+
+            return View(profileModel != null ? ProfileMapper.MapProfileModelToProfileViewModel(profileModel) : new ProfileViewModel());
         }
 
         [HttpPost]
         [Route("/profile")]
         [AutoValidateAntiforgeryToken]
-        public async Task<IActionResult> IndexSave()
+        public async Task<IActionResult> IndexSave(ProfileViewModel model)
         {
-            var imageData = Request.Form.Files[0];
+            int? userid = await currentUser.GetCurrentUserId();
 
-            if (imageData != null)
+            if (userid == null)
+                throw new Exception("Пользователь не найден");
+
+            var profiles = await profile.Get((int)userid);
+
+            if (model.ProfileId != null && !profiles.Any(x => x.ProfileId == model.ProfileId))
+                throw new Exception("Error");
+
+            if (ModelState.IsValid)
             {
-                WebFile webFile = new WebFile();
-                string filename = webFile.GetWebFileName(imageData.FileName);
-                await webFile.UploadAndResizeImage(imageData.OpenReadStream(), filename, 800, 600);
+                var profileModel = ProfileMapper.MapProfileViewModelToProfileModel(model);
+                profileModel.UserId = (int)userid;
+
+                if (Request.Form.Files.Count > 0 && Request.Form.Files[0] != null)
+                {
+                    WebFile webFile = new WebFile();
+                    string filename = webFile.GetWebFileName(Request.Form.Files[0].FileName);
+                    await webFile.UploadAndResizeImage(Request.Form.Files[0].OpenReadStream(), filename, 800, 600);
+                    profileModel.ProfileImage = filename;
+                }
+
+                await profile.Update(profileModel);
+                return Redirect("/");
             }
+            
             return View("Index", new ProfileViewModel());
         }
     }

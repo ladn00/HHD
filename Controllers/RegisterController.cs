@@ -1,7 +1,7 @@
 ﻿using HHD.BL.Auth;
 using HHD.Middleware;
 using HHD.ViewModels;
-using HHD.VoewMapper;
+using HHD.ViewMapper;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HHD.Controllers

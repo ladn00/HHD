@@ -1,5 +1,7 @@
 ﻿using HHD.BL.General;
+using HHD.BL.Profile;
 using HHD.DAL;
+using HHD.DAL.Models;
 
 namespace HHD.BL.Auth
 {
@@ -9,13 +11,15 @@ namespace HHD.BL.Auth
         private readonly IDbSession dbSession;
         private readonly IWebCookie webCookie;
         private readonly IUserTokenDAL userTokenDAL;
+        private readonly IProfileDAL profileDAL;
 
-        public CurrentUser(IHttpContextAccessor httpContextAccessor, IDbSession dbSession, IWebCookie webCookie, IUserTokenDAL userTokenDAL)
+        public CurrentUser(IHttpContextAccessor httpContextAccessor, IDbSession dbSession, IWebCookie webCookie, IUserTokenDAL userTokenDAL, IProfileDAL profileDAL)
         {
             this.httpContextAccessor = httpContextAccessor;
             this.dbSession = dbSession;
             this.webCookie = webCookie;
             this.userTokenDAL = userTokenDAL;
+            this.profileDAL = profileDAL;
         }
 
         public async Task<int?> GetUserByTocken()
@@ -49,6 +53,21 @@ namespace HHD.BL.Auth
                 }
             }
             return isLoggedIn;
+        }
+
+        public async Task<int?> GetCurrentUserId()
+        {
+            return await dbSession.GetUserId();
+        }
+
+        public async Task<IEnumerable<ProfileModel>> GetProfiles()
+        {
+            int? userid = await GetCurrentUserId();
+
+            if (userid == null)
+                throw new Exception("Пользователь не найден");
+
+            return await profileDAL.Get((int)userid);
         }
     }
 }

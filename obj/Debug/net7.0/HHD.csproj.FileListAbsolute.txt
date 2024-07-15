@@ -230,3 +230,4 @@ D:\проекты вс\HHD\obj\Debug\net7.0\HHD.pdb
 D:\проекты вс\HHD\obj\Debug\net7.0\HHD.genruntimeconfig.cache
 D:\проекты вс\HHD\obj\Debug\net7.0\ref\HHD.dll
 D:\проекты вс\HHD\obj\Debug\net7.0\HHD.sourcelink.json
+D:\проекты вс\HHD\bin\Debug\net7.0\SixLabors.ImageSharp.dll

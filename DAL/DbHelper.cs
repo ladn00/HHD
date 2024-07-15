@@ -14,7 +14,7 @@ namespace HHD.DAL
             {
                 await connection.OpenAsync();
 
-                return await connection.ExecuteAsync(sql, model);
+                return await connection.QueryFirstOrDefaultAsync<int>(sql, model);
             }
         }
 

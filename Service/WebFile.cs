@@ -40,7 +40,7 @@ namespace HHD.Service
                 int aspectWidth = newWidth;
                 int aspectHeight = newHeight;
 
-                if (image.Width / (image.Height / newHeight) > newWidth)
+                if (image.Width / (image.Height / (float)newHeight) > newWidth)
                     aspectHeight = (int)(image.Height / (image.Width / (float)newWidth));
                 else
                     aspectWidth = (int)(image.Width / (image.Height / (float)newHeight));

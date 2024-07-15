@@ -1,15 +1,12 @@
-﻿using System.ComponentModel.DataAnnotations;
-
-namespace HHD.ViewModels
+﻿namespace HHD.DAL.Models
 {
-    public class ProfileViewModel
+    public class ProfileModel
     {
         public int? ProfileId { get; set; }
-        [Required]
+        public int UserId { get; set; }
         public string? ProfileName { get; set; }
-        [Required]
         public string? FirstName { get; set; }
-        [Required]
         public string? LastName { get; set; }
+        public string? ProfileImage { get; set; }
     }
 }

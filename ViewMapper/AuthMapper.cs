@@ -1,7 +1,7 @@
 ﻿using HHD.ViewModels;
 using HHD.DAL.Models;
 
-namespace HHD.VoewMapper
+namespace HHD.ViewMapper
 {
     public class AuthMapper
     {

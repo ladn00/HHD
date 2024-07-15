@@ -9,11 +9,16 @@ builder.Services.AddScoped<IAuth, Auth>();
 builder.Services.AddSingleton<HHD.DAL.IAuthDAL, HHD.DAL.AuthDAL>();
 builder.Services.AddSingleton<HHD.DAL.IDbSessionDAL, HHD.DAL.DbSessionDAL>();
 builder.Services.AddSingleton<HHD.DAL.IUserTokenDAL, HHD.DAL.UserTokenDAL>();
+builder.Services.AddSingleton<HHD.DAL.IProfileDAL, HHD.DAL.ProfileDAL>();
+
 builder.Services.AddSingleton<IEncrypt, Encrypt>();
 builder.Services.AddScoped<ICurrentUser, CurrentUser>();
 builder.Services.AddScoped<IDbSession, DbSession>();
-builder.Services.AddScoped<HHD.BL.General.IWebCookie, HHD.BL.General.WebCookie>();
 builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+
+builder.Services.AddScoped<HHD.BL.General.IWebCookie, HHD.BL.General.WebCookie>();
+builder.Services.AddSingleton<HHD.BL.Profile.IProfile, HHD.BL.Profile.Profile>();
+
 
 builder.Services.AddMvc();
 
