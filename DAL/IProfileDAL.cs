@@ -7,5 +7,7 @@ namespace HHD.DAL
         Task<IEnumerable<ProfileModel>> Get(int userId);
         Task<int> Add(ProfileModel model);
         Task Update(ProfileModel model);
+        Task<IEnumerable<ProfileModel>> Search(int top);
+        Task<ProfileModel> GetByProfileId(int profileId);
     }
 }

@@ -4,5 +4,14 @@
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <div class="row">
+        @foreach (var resume in Model)
+        {
+            <div class="col-sm-4 col-md-3">
+                <a href="/resume/@resume.ProfileId"><img src="@resume.ProfileImage" class="profileimage" /></a>
+                <h3>@resume.FirstName @resume.LastName</h3>
+                <div>@resume.ProfileName</div>
+            </div>
+        }
+    </div>
 </div>

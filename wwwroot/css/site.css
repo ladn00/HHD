@@ -24,3 +24,36 @@ body {
 .error, .validation-summary-errors {
     color: red;
 }
+
+.button {
+    display: inline-block;
+    border-radius: 0px;
+    padding: 4px 23px;
+    color: #fff;
+    cursor: pointer;
+    height: 36px;
+    line-height: 30px;
+    text-align: center;
+    background-color: #d35400;
+    font-style: normal;
+    text-transform: uppercase;
+    border: 0;
+    outline: none;
+}
+
+.button:hover {
+    color: white;
+    text-decoration: none;
+    background: #2980b9;
+}
+
+.form label{
+    display:block;
+}
+
+.form input {
+    width: 100%;
+}
+.profileimage {
+    width : 100%;
+}

@@ -31,5 +31,23 @@ namespace HHD.DAL
 
             await DbHelper.ExecuteAsync(sql, model);
         }
+
+        public async Task<IEnumerable<ProfileModel>> Search(int top)
+        {
+            return await DbHelper.QueryAsync<ProfileModel>(@$"
+                        select ProfileId, UserId, ProfileName, FirstName, LastName, ProfileImage 
+                        from Profile
+                        order by 1 desc
+                        limit @top 
+                        ", new { top = top });
+        }
+
+        public async Task<ProfileModel> GetByProfileId(int profileId)
+        {
+            return await DbHelper.QueryScalarAsync<ProfileModel>(@"
+                        select 	ProfileId, UserId, ProfileName, FirstName, LastName, ProfileImage 
+                        from Profile
+                        where ProfileId = @profileId", new { profileId = profileId });
+        }
     }
 }

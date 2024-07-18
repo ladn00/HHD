@@ -1,4 +1,5 @@
 using HHD.BL.Auth;
+using HHD.BL.Resume;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,8 +19,7 @@ builder.Services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
 
 builder.Services.AddScoped<HHD.BL.General.IWebCookie, HHD.BL.General.WebCookie>();
 builder.Services.AddSingleton<HHD.BL.Profile.IProfile, HHD.BL.Profile.Profile>();
-
-
+builder.Services.AddSingleton<HHD.BL.Resume.IResume, HHD.BL.Resume.Resume>();
 builder.Services.AddMvc();
 
 var app = builder.Build();

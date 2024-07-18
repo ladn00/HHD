@@ -9,10 +9,12 @@ namespace HHD.Service
 {
     public class WebFile
     {
+        const string FOLDER_PREFIX = "./wwwroot";
+
         public string GetWebFileName(string filename)
         {
             string folder = GetWebFileFolder(filename);
-            CreateFolder(folder, filename);
+            CreateFolder(FOLDER_PREFIX + folder);
 
             return folder + "/" + Path.GetFileNameWithoutExtension(filename) + ".jpeg";
         }
@@ -24,10 +26,10 @@ namespace HHD.Service
             byte[] hashBytes = mD5.ComputeHash(inputBytes);
             string hash = Convert.ToHexString(hashBytes);
 
-            return "./wwwroot/images/" + hash.Substring(0, 2) + "/" + hash.Substring(0, 4);
+            return "/images/" + hash.Substring(0, 2) + "/" + hash.Substring(0, 4);
         }
 
-        public void CreateFolder(string dir, string filename)
+        public void CreateFolder(string dir)
         {
             if (!Directory.Exists(dir))
                 Directory.CreateDirectory(dir);
@@ -47,7 +49,7 @@ namespace HHD.Service
 
                 image.Mutate(x => x.Resize(aspectWidth, aspectHeight, KnownResamplers.Lanczos3));
 
-                await image.SaveAsJpegAsync(filename, new JpegEncoder() { Quality = 75 });
+                await image.SaveAsJpegAsync(FOLDER_PREFIX + filename, new JpegEncoder() { Quality = 75 });
             }
         }
     }
