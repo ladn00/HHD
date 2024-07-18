@@ -1,4 +1,6 @@
-﻿using HHD.DAL.Models;
+﻿using HHD.BL.Profile;
+using HHD.DAL.Models;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HHD.DAL
 {
@@ -7,10 +9,10 @@ namespace HHD.DAL
         public async Task<int> Add(ProfileModel model)
         {
             string sql = @"insert into Profile(UserId, ProfileName, FirstName, LastName, ProfileImage)
-                                values(@UserId, @ProfileName, @FirstName, @LastName, @ProfileImage) returning ProfileID";
+                                values(@UserId, @ProfileName, @FirstName, @LastName, @ProfileImage) returning ProfileID"
+            ;
 
-            var result = await DbHelper.QueryAsync<int>(sql, model);
-            return result.First();
+            return await DbHelper.QueryScalarAsync<int>(sql, model);
         }
 
         public async Task<IEnumerable<ProfileModel>> Get(int userId)
@@ -27,7 +29,7 @@ namespace HHD.DAL
                       set ProfileName = @ProfileName, FirstName = @FirstName, LastName = @LastName, ProfileImage = @ProfileImage
                       where ProfileId = @ProfileId";
 
-            await DbHelper.QueryAsync<int>(sql, model);
+            await DbHelper.ExecuteAsync(sql, model);
         }
     }
 }

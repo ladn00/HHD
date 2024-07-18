@@ -20,7 +20,7 @@ namespace HHD.BL.Profile
         public async Task Update(ProfileModel profileModel)
         {
             if(profileModel.ProfileId == null)
-                await profileDAL.Add(profileModel);
+                profileModel.ProfileId = await profileDAL.Add(profileModel);
             else
                 await profileDAL.Update(profileModel);
         }

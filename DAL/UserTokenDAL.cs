@@ -11,7 +11,7 @@ namespace HHD.DAL
             string sql = @"insert into UserToken (UserTokenID, UserId, Created)
                       values (@tockenid, @userid, NOW())";
 
-            await DbHelper.ExecuteScalarAsync(sql, new  {userid = userid, tockenid = tockenid });
+            await DbHelper.ExecuteAsync(sql, new { userid = userid, tockenid = tockenid });
             return tockenid;
         }
 
@@ -21,7 +21,7 @@ namespace HHD.DAL
                        from UserToken 
                        where UserTokenId = @tockenid";
 
-            return await DbHelper.ExecuteScalarAsync(sql, new { tockenid = tokenid });
+            return await DbHelper.QueryScalarAsync<int>(sql, new { tockenid = tokenid });
         }
     }
 }
