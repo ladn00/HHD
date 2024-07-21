@@ -1,0 +1,17 @@
+﻿@model HHD.DAL.Models.ResumeModel
+@{
+    ViewData["Title"] = Model.Profile.ProfileName + " - " + Model.Profile.FirstName + " " + Model.Profile.LastName;
+}
+
+<div class="text-center">
+    <h1 class="display-4">@Model.Profile.FirstName @Model.Profile.LastName</h1>
+    <div class="row">
+        <div class="offset-sm-3 col-sm-6">
+            <h3>@Model.Profile.ProfileName</h3>
+            @if (!String.IsNullOrEmpty(Model.Profile.ProfileImage))
+            {
+                <img src="@Model.Profile.ProfileImage" class="profileimage" />
+            }
+        </div>
+    </div>
+</div>

@@ -21,7 +21,7 @@ namespace HHD.DAL
                        from UserToken 
                        where UserTokenId = @tockenid";
 
-            return await DbHelper.QueryScalarAsync<int>(sql, new { tockenid = tokenid });
+            return await DbHelper.QueryScalarAsync<int?>(sql, new { tockenid = tokenid });
         }
     }
 }
