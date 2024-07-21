@@ -1,29 +1,48 @@
-﻿@model ProfileViewModel
+﻿@using HHD.Service;
+
+@model ProfileViewModel
 
 @{
     ViewData["Title"] = "Профиль";
 }
-<h1>Мой профиль</h1>
+<h1>@Localization.Languages["ru"].GetLabel("MyProfile"))</h1>
 <div class="row">
     <div class="col-sm-8">
         <form action="/profile" method="post" class="form">
             <input type="hidden" value="@Model.ProfileId" name="ProfileId" />
             @Html.AntiForgeryToken()
-            <p>
+
+            <div class="form-group">
+                <select name="ProfileStatus" class="text">
+                    @foreach (int ps in Enum.GetValues(typeof(HHD.DAL.Models.ProfileStatusEnum))) {
+                        if ((int)Model.ProfileStatus == ps)
+                        {
+                            <option value="@ps" selected="selected">@Localization.Languages["ru"].GetLabel("ProfileStatusEnum" + Enum.GetName(typeof(HHD.DAL.Models.ProfileStatusEnum), ps))</option>
+                        }
+                        else
+                        {
+                            <option value="@ps">@Localization.Languages["ru"].GetLabel("ProfileStatusEnum" + Enum.GetName(typeof(HHD.DAL.Models.ProfileStatusEnum), ps))</option>
+                        }
+                        
+                    }
+                </select>
+            </div>
+
+            <div class="form-group">
                 <label>Имя профиля</label>
                 <input name="ProfileName" type="text" value="@Model.ProfileName" />
                 <div class="error">@Html.ValidationMessageFor(m => m.ProfileName)</div>
-            </p>
-            <p>
+            </div>
+                <div class="form-group">
                 <label>Имя</label>
                 <input name="FirstName" type="text" value="@Model.FirstName" />
                 <div class="error">@Html.ValidationMessageFor(m => m.FirstName)</div>
-            </p>
-            <p>
+            </div>
+                    <div class="form-group">
                 <label>Фамилия</label>
                 <input name="LastName" type="text" value="@Model.LastName" />
                 <div class="error">@Html.ValidationMessageFor(m => m.LastName)</div>
-            </p>
+            </div>
             <button class="button">Сохранить</button>
         </form>
     </div>

@@ -253,3 +253,5 @@ D:\проекты вс\HHD\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnaly
 D:\проекты вс\HHD\bin\Debug\net7.0\BlazorDebugProxy\Microsoft.CodeAnalysis.Scripting.dll
 D:\проекты вс\HHD\bin\Debug\net7.0\BlazorDebugProxy\Newtonsoft.Json.dll
 D:\проекты вс\HHD\bin\Debug\net7.0\Microsoft.AspNetCore.Components.WebAssembly.Server.dll
+D:\проекты вс\HHD\bin\Debug\net7.0\Localizations\Label-en.json
+D:\проекты вс\HHD\bin\Debug\net7.0\Localizations\Label-ru.json

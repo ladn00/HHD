@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using HHD.DAL.Models;
+using System.ComponentModel.DataAnnotations;
 
 namespace HHD.ViewModels
 {
@@ -13,5 +14,8 @@ namespace HHD.ViewModels
         public string? LastName { get; set; }
 
         public string? ProfileImage { get; set; }
+
+        public ProfileStatusEnum ProfileStatus { get; set; }
+
     }
 }

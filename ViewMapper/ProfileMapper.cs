@@ -12,7 +12,8 @@ namespace HHD.ViewMapper
                 ProfileId = model.ProfileId,
                 ProfileName = model.ProfileName,
                 FirstName = model.FirstName,
-                LastName = model.LastName
+                LastName = model.LastName,
+                ProfileStatus = model.ProfileStatus
             };
         }
 
@@ -24,7 +25,8 @@ namespace HHD.ViewMapper
                 ProfileName = model.ProfileName,
                 FirstName = model.FirstName,
                 LastName = model.LastName,
-                ProfileImage = model.ProfileImage
+                ProfileImage = model.ProfileImage,
+                ProfileStatus = model.ProfileStatus
             };
         }
     }
