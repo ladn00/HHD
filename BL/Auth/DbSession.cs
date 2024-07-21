@@ -1,6 +1,7 @@
 ﻿using HHD.DAL.Models;
 using HHD.DAL;
 using HHD.BL.General;
+using System.Text.Json;
 
 namespace HHD.BL.Auth
 {
@@ -8,6 +9,9 @@ namespace HHD.BL.Auth
     {
         private readonly IDbSessionDAL sessionDAL;
         private readonly IWebCookie webCookie;
+
+        private SessionModel? sessionModel = null;
+        private Dictionary<string, object> SessionData = new Dictionary<string, object>();
 
         public DbSession(IDbSessionDAL sessionDAL, IWebCookie webCookie)
         {
@@ -33,7 +37,6 @@ namespace HHD.BL.Auth
             return data;
         }
 
-        private SessionModel? sessionModel = null;
         public async Task<SessionModel> GetSession()
         {
             if (sessionModel != null)
@@ -54,7 +57,42 @@ namespace HHD.BL.Auth
                 CreateSessionCookie(data.DbSessionId);
             }
             sessionModel = data;
+            if (data.SessionData != null)
+            {
+                SessionData = JsonSerializer.Deserialize<Dictionary<string, object>>(data.SessionData) ?? new Dictionary<string, object>();
+            }
+
+            await this.sessionDAL.Extend(data.DbSessionId);
             return data;
+        }
+
+        public async Task UpdateSessionData()
+        {
+            if (this.sessionModel != null)
+                await this.sessionDAL.Update(this.sessionModel.DbSessionId, JsonSerializer.Serialize(SessionData));
+            else
+                throw new Exception("Сессия не загружена");
+        }
+
+        public void AddValue(string key, object value)
+        {
+            if (SessionData.ContainsKey(key))
+                SessionData[key] = value;
+            else
+                SessionData.Add(key, value);
+        }
+
+        public void RemoveValue(string key)
+        {
+            if (SessionData.ContainsKey(key))
+                SessionData.Remove(key);
+        }
+
+        public object GetValueDef(string key, object defaultValue)
+        {
+            if (SessionData.ContainsKey(key))
+                return SessionData[key];
+            return defaultValue;
         }
 
         public async Task SetUserId(int userId)
@@ -63,6 +101,7 @@ namespace HHD.BL.Auth
             data.UserId = userId;
             data.DbSessionId = Guid.NewGuid();
             CreateSessionCookie(data.DbSessionId);
+            data.SessionData = JsonSerializer.Serialize(SessionData);
             await sessionDAL.Create(data);
         }
 

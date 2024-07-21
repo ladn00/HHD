@@ -57,3 +57,22 @@ body {
 .profileimage {
     width : 100%;
 }
+
+.autocomplete {
+    position: relative;
+}
+
+    .autocomplete .options {
+        position: absolute;
+        top: 40px;
+        z-index: 999;
+        margin: 0px;
+        padding: 0px;
+    }
+
+        .autocomplete .options li {
+            background: #fff;
+            border: 1px solid #ccc;
+            list-style: none;
+            padding: 4px 12px;
+        }

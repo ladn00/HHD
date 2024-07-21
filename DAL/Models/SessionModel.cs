@@ -4,7 +4,7 @@
     {
         public Guid DbSessionId { get; set; }
 
-        public string? SessionContent { get; set; }
+        public string? SessionData { get; set; }
 
         public DateTime Created { get; set; }
 

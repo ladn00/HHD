@@ -5,7 +5,9 @@ VisualStudioVersion = 17.10.35013.160
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHD", "HHD.csproj", "{FFDB7F32-06E3-487B-B4F2-CE1883ACDBAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHD_test", "..\HHD_test\HHD_test.csproj", "{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHD_test", "..\HHD_test\HHD_test.csproj", "{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHDUI", "..\HHDUI\HHDUI.csproj", "{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

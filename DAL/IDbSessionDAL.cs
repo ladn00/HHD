@@ -6,7 +6,9 @@ namespace HHD.DAL
     {
         Task<SessionModel?> Get(Guid sessionId);
 
-        Task Update(SessionModel model);
+        Task Update(Guid dbSessionID, string sessionData);
+
+        Task Extend(Guid dbSessionID);
 
         Task Create(SessionModel model);
 

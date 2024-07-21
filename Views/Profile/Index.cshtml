@@ -3,7 +3,7 @@
 @{
     ViewData["Title"] = "Профиль";
 }
-
+<h1>Мой профиль</h1>
 <div class="row">
     <div class="col-sm-8">
         <form action="/profile" method="post" class="form">
@@ -42,3 +42,11 @@
         </form>
     </div>
 </div>
+
+<h1>Я знаю:</h1>
+<div class="row">
+    <div class="col-sm-12">
+        <component type="typeof(HHDUI.Pages.ProfileSkillEditor)" render-mode="WebAssembly" />
+    </div>
+</div>
+<script src="_framework/blazor.webassembly.js"></script>

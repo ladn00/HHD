@@ -67,7 +67,7 @@ namespace HHD.BL.Auth
             if (userid == null)
                 throw new Exception("Пользователь не найден");
 
-            return await profileDAL.Get((int)userid);
+            return await profileDAL.GetByUserId((int)userid);
         }
     }
 }

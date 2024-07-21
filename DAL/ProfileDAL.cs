@@ -49,5 +49,13 @@ namespace HHD.DAL
                         from Profile
                         where ProfileId = @profileId", new { profileId = profileId });
         }
+
+        public async Task<IEnumerable<ProfileModel>> GetByUserId(int userId)
+        {
+            return await DbHelper.QueryAsync<ProfileModel>(@"
+                        select 	ProfileId, UserId, ProfileName, FirstName, LastName, ProfileImage 
+                        from Profile
+                        where UserId = @id", new { id = userId });
+        }
     }
 }

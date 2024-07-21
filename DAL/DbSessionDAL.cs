@@ -10,7 +10,7 @@ namespace HHD.DAL
         public async Task Create(SessionModel model)
         {
             string sql = @"insert into DbSession (DbSessionID, SessionData, Created, LastAccessed, UserId)
-                      values (@DbSessionID, @SessionContent, @Created, @LastAccessed, @UserId)";
+                    values (@DbSessionID, @SessionData, @Created, @LastAccessed, @UserId)";
 
             await DbHelper.ExecuteAsync(sql, model);
         }
@@ -32,13 +32,22 @@ namespace HHD.DAL
             await DbHelper.QueryAsync<SessionModel>(sql, new { sessionId = sessionId });
         }
 
-        public async Task Update(SessionModel model)
+        public async Task Update(Guid dbSessionID, string sessionData)
         {
             string sql = @"update DbSession
-                      set SessionData = @SessionData, LastAccessed = @LastAccessed, UserId = @UserId
-                      where DbSessionID = @DbSessionID";
+                    set SessionData = @sessionData
+                    where DbSessionID = @dbSessionID";
 
-            await DbHelper.ExecuteAsync(sql, model);
+            await DbHelper.ExecuteAsync(sql, new { dbSessionID = dbSessionID, sessionData = sessionData });
+        }
+
+        public async Task Extend(Guid dbSessionID)
+        {
+            string sql = @"update DbSession
+                    set LastAccessed = @lastAccessed
+                    where DbSessionID = @dbSessionID";
+
+            await DbHelper.ExecuteAsync(sql, new { dbSessionID = dbSessionID, lastAccessed = DateTime.Now });
         }
     }
 }
