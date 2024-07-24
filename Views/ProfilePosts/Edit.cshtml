@@ -1,0 +1,14 @@
+﻿@model PostViewModel
+
+<div class="row">
+    @if (Model.PostId == null)
+    {
+        ViewData["Title"] = "Новая статья";
+        <h1>Новая статья</h1>
+    }
+    else
+    {
+        ViewData["Title"] = "Редактирование";
+        <h1>Редактирование</h1>
+    }
+</div>
