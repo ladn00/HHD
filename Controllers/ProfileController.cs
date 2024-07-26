@@ -90,5 +90,12 @@ namespace HHD.Controllers
 
             return Redirect("/profile");
         }
+
+        [HttpGet]
+        [Route("/profile/posts")]
+        public async Task<IActionResult> Posts()
+        {
+            return View("Posts");
+        }
     }
 }

@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHD", "HHD.csproj", "{FFDB7
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHD_test", "..\HHD_test\HHD_test.csproj", "{8C6F8609-FA4F-46A3-84A6-899878C7F4D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HHDUI", "..\HHDUI\HHDUI.csproj", "{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HHDUI", "..\HHDUI\HHDUI.csproj", "{9DFA072F-5162-4A1C-A9CA-16A25E730DDC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
