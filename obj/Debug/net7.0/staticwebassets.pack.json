@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
+      "Id": "D:\\проекты вс\\HHD\\wwwroot\\data\\free-icon-camera-964062.png",
+      "PackagePath": "staticwebassets\\data\\free-icon-camera-964062.png"
+    },
+    {
       "Id": "D:\\проекты вс\\HHD\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },

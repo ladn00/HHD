@@ -7,26 +7,33 @@ using SixLabors.ImageSharp.Formats.Jpeg;
 
 namespace HHD.Service
 {
+    public class ImageFileNames
+    {
+        public string FullFilename { get; set; } = "";
+        public string ThumbFilename { get; set; } = "";
+        public string SmallFilename { get; set; } = "";
+    }
+
     public class WebFile
     {
         const string FOLDER_PREFIX = "./wwwroot";
 
-        public string GetWebFileName(string filename)
+        public string GetWebFileName(string filename, string folder = "images")
         {
-            string folder = GetWebFileFolder(filename);
-            CreateFolder(FOLDER_PREFIX + folder);
+            string dir = GetWebFileFolder(filename, folder);
+            CreateFolder(FOLDER_PREFIX + dir);
 
-            return folder + "/" + Path.GetFileNameWithoutExtension(filename) + ".jpeg";
+            return dir + "/" + Path.GetFileNameWithoutExtension(filename) + ".jpeg";
         }
 
-        public string GetWebFileFolder(string filename)
+        public string GetWebFileFolder(string filename, string folder = "images")
         {
             MD5 mD5 = MD5.Create();
             byte[] inputBytes = Encoding.ASCII.GetBytes(filename);
             byte[] hashBytes = mD5.ComputeHash(inputBytes);
             string hash = Convert.ToHexString(hashBytes);
 
-            return "/images/" + hash.Substring(0, 2) + "/" + hash.Substring(0, 4);
+            return $"/{folder}/" + hash.Substring(0, 2) + "/" + hash.Substring(0, 4);
         }
 
         public void CreateFolder(string dir)

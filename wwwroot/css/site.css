@@ -83,3 +83,8 @@ body {
     border: 1px solid #ccc;
     width: 100%;
 }
+
+.post-image {
+    max-width: 100%;
+    display: block;
+}
