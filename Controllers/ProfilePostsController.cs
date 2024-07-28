@@ -6,6 +6,8 @@ using HHD.ViewModels;
 using HHD.BL.Data;
 using HHD.Service;
 using System.Net.Http.Headers;
+using HHD.DAL.Models;
+using HHD.Models;
 
 namespace HHD.Controllers
 {
@@ -67,9 +69,47 @@ namespace HHD.Controllers
         }
 
         [HttpPut]
-        public async Task<IActionResult> Save([FromBody] PostViewModel model)
+        [Route("/profile/post")]
+        public async Task<IActionResult> Save([FromBody] PostViewModel postview)
         {
-            return View();
+            var userId = await currentUser.GetCurrentUserId() ?? 0;
+            if (ModelState.IsValid && postview.PostId != null)
+            {
+                PostModel dbModel = await post.GetPost(postview.PostId ?? 0);
+                if (dbModel.UserId != userId)
+                {
+                    ModelState.TryAddModelError("Title", "Ошибка");
+                    HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                    return new JsonResult(new ErrorsViewModel(ModelState));
+                }
+            }
+
+            if (postview.PostId == null && postview.ContentItems.Any(m => m.PostContentId != null))
+            {
+                ModelState.TryAddModelError("Title", "Ошибка");
+            }
+
+            if (postview.PostId != null)
+            {
+                var existingContentIds = (await this.post.GetPostItems(postview.PostId ?? 0)).Where(x => x.PostContentId != null).ToDictionary(x => x.PostContentId ?? 0, x => x.PostId);
+            
+                if(postview.ContentItems.Any(x => x.PostContentId != null && !existingContentIds.ContainsKey(x.PostContentId ?? 0)))
+                {
+                    ModelState.TryAddModelError("Title", "Ошибка");
+                }
+            }
+
+            if (!ModelState.IsValid)
+            {
+                HttpContext.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                return new JsonResult(new ErrorsViewModel(ModelState));
+            }
+
+            var newModel = ViewMapper.PostMapper.MapPostViewModelToPostModel(postview);
+            newModel.UserId = userId;
+            int postId = await post.AddOrUpdate(newModel);
+            await post.AddOrUpdateContentItems(ViewMapper.PostMapper.MapPostItemViewModelToPostItemModel(postview.ContentItems, postId));
+            return new JsonResult(new { id = postId });
         }
 
         [HttpPost]

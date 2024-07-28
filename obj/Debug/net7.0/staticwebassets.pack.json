@@ -261,6 +261,14 @@
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {
+      "Id": "D:\\проекты вс\\HHD\\wwwroot\\postimages\\1F\\1F1C\\9-photo_2024-05-26_01-18-57.jpeg",
+      "PackagePath": "staticwebassets\\postimages\\1F\\1F1C\\9-photo_2024-05-26_01-18-57.jpeg"
+    },
+    {
+      "Id": "D:\\проекты вс\\HHD\\wwwroot\\postimages\\2E\\2E3D\\9-photo_2024-05-28_12-34-55.jpeg",
+      "PackagePath": "staticwebassets\\postimages\\2E\\2E3D\\9-photo_2024-05-28_12-34-55.jpeg"
+    },
+    {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.HHD.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
