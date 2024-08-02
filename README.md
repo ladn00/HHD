@@ -1,3 +1,5 @@
+Dapper, password encryption, Blazor, WebAssembly.
+
 # Profile
 
 ![image](https://github.com/user-attachments/assets/09c3d410-e7b4-4eb2-aa49-127ac1a3c08c)
